@@ -1,0 +1,32 @@
+html {
+  min-height: 100vh;
+}
+
+.todo-list__item {
+  display: flex;
+  width: 50%;
+  background-color: #ffccff;
+  padding: 1rem;
+  margin: 1rem 0 1rem;
+}
+
+.todo-list__item-text {
+  flex-grow: 1;
+}
+
+input{
+  margin: 1rem;
+  padding: 1rem;
+}
+
+input[type="text"] {
+  border-radius: 10px;
+  border: none;
+  margin: 1rem 0 1rem;
+  padding: 1rem;
+  background-color: #98ff8a;
+}
+
+.complete {
+  text-decoration: line-through;
+}

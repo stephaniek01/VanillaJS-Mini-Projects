@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightcoral;
+  padding: 5px;
+  min-height: 8vh;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  margin: 10px;
+}
+.nav-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.burger {
+  position: relative;
+  /* display: none; */
+  cursor: pointer;
+}
+
+.burger div {
+  height: 3px;
+  width: 30px;
+  background-color: black;
+  margin: 5px;
+  transition: all 5s;
+}
+
+
+@media screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    background-color: lightcoral;
+    width: 50%;
+    height: 92vh;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-link {
+    opacity: 0;
+  }
+}
+
+.active-nav {
+  transform: translateX(0%);
+}
+
+@keyframes navLinksFadeIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.toggle .line1 {
+    transform: rotate(45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(-45deg) translate(-5px, -6px);
+
+}
